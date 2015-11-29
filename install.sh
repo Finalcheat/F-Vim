@@ -46,9 +46,11 @@ cd $CURRENT_DIR/bundle/YouCompleteMe/
 
 if [ `which clang` ]   # check system clang
 then
-    bash -x install.sh --clang-completer --system-libclang   # use system clang
+    ./install.py --clang-completer
+    # bash -x install.sh --clang-completer --system-libclang   # use system clang
 else
-    bash -x install.sh --clang-completer
+    ./install.py --clang-completer
+    # bash -x install.sh --clang-completer
 fi
 
 
