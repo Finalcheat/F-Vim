@@ -267,6 +267,15 @@ hi CtrlSpaceStatus   ctermfg=230  ctermbg=234  cterm=NONE
 " hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
 " hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
 
+" 状态栏
+Bundle 'Lokaltog/vim-powerline'
+"powerline{
+set laststatus=2
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'unicode'
+"}}
 
 
 
