@@ -336,6 +336,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:syntastic_cpp_compiler = 'c++'  "change the compiler to g++ to support c++11.
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++' "set the options of g++ to suport c++11.
+let g:ycm_register_as_syntastic_checker = 0
 
 
 " 跳转到定义处, 分屏打开
