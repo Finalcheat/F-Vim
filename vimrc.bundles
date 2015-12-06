@@ -248,16 +248,42 @@ au Syntax * RainbowParenthesesLoadBraces
 "目录导航
 Bundle 'scrooloose/nerdtree'
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeHighlightCursorline=1
+" let NERDTreeHighlightCursorline=1
 " let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
-"close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 " s/v 分屏打开文件
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
+" 启动自动打开NERDTree
+" autocmd vimenter * NERDTree
+autocmd VimEnter * NERDTree
+wincmd w
+autocmd VimEnter * wincmd w
 
+"close vim if the only window left open is a NERDTree
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
 
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit()
 
 
 " Vim Workspace Controller
