@@ -204,9 +204,9 @@ autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 
 
 "设置标记一列的背景颜色和数字一行颜色一致
-" i! link SignColumn   LineNr
-" i! link ShowMarksHLl DiffAdd
-" i! link ShowMarksHLu DiffChange
+hi! link SignColumn   LineNr
+hi! link ShowMarksHLl DiffAdd
+hi! link ShowMarksHLu DiffChange
 
 " for error highlight，防止错误整行标红导致看不清
 highlight clear SpellBad
@@ -218,6 +218,8 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
+highlight CursorLine cterm=underline ctermbg=NONE ctermfg=green guibg=darkred guifg=white
+highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=blue guibg=darkred guifg=white
 
 
 
@@ -226,6 +228,8 @@ highlight SpellLocal term=underline cterm=underline
 
 
 
+" 禁止光标闪烁
+" set gcr=a:block-blinkon0
 
 
 
