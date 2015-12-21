@@ -157,8 +157,6 @@ set ffs=unix,dos,mac
 
 
 " 自动补全配置
-"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set completeopt=longest,menu
 
 " 增强模式中的命令行自动完成操作
 set wildmenu
