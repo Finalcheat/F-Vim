@@ -51,8 +51,8 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 
 " 突出显示当前行等
 " set cursorcolumn
-" set cursorline          " 突出显示当前行
-
+" 突出显示当前行
+set cursorline          
 
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
