@@ -382,6 +382,17 @@ let g:DoxygenToolkit_blockFooter = "--------------------------------------------
 
 
 
+Bundle "terryma/vim-multiple-cursors"
+" Default mapping
+" let g:multi_cursor_next_key='<C-n>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<Esc>'
+"
+" Map start key separately from next key
+let g:multi_cursor_start_key='<F6>'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
