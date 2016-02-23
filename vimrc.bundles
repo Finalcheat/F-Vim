@@ -377,8 +377,8 @@ let g:ycm_filetype_blacklist = {
 " https://github.com/vim-scripts/DoxygenToolkit.vim
 Bundle "vim-scripts/DoxygenToolkit.vim"
 let g:DoxygenToolkit_authorName = "Finalcheat"
-let g:DoxygenToolkit_blockHeader = "--------------------------------------------------------------------------" 
-let g:DoxygenToolkit_blockFooter = "--------------------------------------------------------------------------"
+" let g:DoxygenToolkit_blockHeader = "--------------------------------------------------------------------------" 
+" let g:DoxygenToolkit_blockFooter = "--------------------------------------------------------------------------"
 
 
 
